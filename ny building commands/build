@@ -1,0 +1,12 @@
+cmake -S ../git/llvm-project/llvm -G Ninja \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DLLVM_PARALLEL_LINK_JOBS=6 \
+    -DLLVM_USE_LINKER=lld \
+    -DLLVM_ENABLE_PROJECTS="clang"
+    
+-DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi"    
+-DLLVM_TARGETS_TO_BUILD=X86    
+LLVM_DEFAULT_TARGET_TRIPLE
+/home/sharyashuv/.local/bin/lvim
+
+cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Debug -G "Ninja" ../git/llvm-project/llvm -DLLVM_USE_LINKER=lld -DLLVM_ENABLE_PROJECTS="clang" -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi" -DLLVM_TARGETS_TO_BUILD=X86  -DLLVM_DEFAULT_TARGET_TRIPLE=x86_64-unknown-linux-gnu -DLLVM_PARALLEL_LINK_JOBS=6
