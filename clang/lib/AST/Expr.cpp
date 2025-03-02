@@ -2178,6 +2178,7 @@ BinaryOperator::getOverloadedOpcode(OverloadedOperatorKind OO) {
   case OO_PipePipe: return BO_LOr;
   case OO_Comma: return BO_Comma;
   case OO_ArrowStar: return BO_PtrMemI;
+  case OO_HaskelBlah: return BO_HaskelBlah;
   }
 }
 

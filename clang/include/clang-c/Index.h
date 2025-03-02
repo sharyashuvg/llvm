@@ -6671,7 +6671,9 @@ enum CXBinaryOperatorKind {
   /** Bitwise OR assignment operator. */
   CXBinaryOperator_OrAssign,
   /** Comma operator. */
-  CXBinaryOperator_Comma
+  CXBinaryOperator_Comma,
+
+  CXBinaryOperator_HaskelBlah
 };
 
 /**

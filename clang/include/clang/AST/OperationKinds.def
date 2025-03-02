@@ -421,6 +421,9 @@ BINARY_OPERATION(OrAssign, "|=")
 BINARY_OPERATION(Comma, ",")
 
 
+BINARY_OPERATION(HaskelBlah, ">>==")
+
+
 //===- Unary Operations ---------------------------------------------------===//
 // Note that additions to this should also update the StmtVisitor class,
 // UnaryOperator::getOverloadedOperator and CXUnaryOperatorKind enum.

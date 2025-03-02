@@ -4301,6 +4301,13 @@ LexStart:
         CurPtr = ConsumeChar(ConsumeChar(CurPtr, SizeTmp, Result),
                              SizeTmp2, Result);
         Kind = tok::greatergreaterequal;
+        unsigned SizeTmp3;
+        char After = getCharAndSize(CurPtr, SizeTmp3);
+        if (After == '=') {
+          CurPtr = ConsumeChar(CurPtr, SizeTmp3, Result);
+          Kind = tok::haskelBlah;
+        }
+
       } else if (After == '>' && IsStartOfConflictMarker(CurPtr-1)) {
         // If this is actually a '>>>>' conflict marker, recognize it as such
         // and recover nicely.
