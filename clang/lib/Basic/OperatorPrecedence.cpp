@@ -11,6 +11,7 @@
 ///
 //===----------------------------------------------------------------------===//
 #include "clang/Basic/OperatorPrecedence.h"
+#include "clang/Basic/TokenKinds.h"
 
 namespace clang {
 
@@ -69,6 +70,7 @@ prec::Level getBinOpPrecedence(tok::TokenKind Kind, bool GreaterThanIsOperator,
   case tok::percent:
   case tok::slash:
   case tok::star:                 return prec::Multiplicative;
+  case tok::haskelBlah:
   case tok::periodstar:
   case tok::arrowstar:            return prec::PointerToMember;
   }
